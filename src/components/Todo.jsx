@@ -121,7 +121,7 @@ const Todo = () => {
         </form>
       </div>
       <div className="todo">
-        <ul>
+        {todos.length > 0 ? (<ul>
           {todos.map((todo) => (
             <SingleTodo
               key={todo.uid}
@@ -131,7 +131,7 @@ const Todo = () => {
               todo={todo}
             />
           ))}
-        </ul>
+        </ul>) : <h2 style={{textAlign: 'center'}}>No Todo Available yet</h2>}
       </div>
     </div>
   );
